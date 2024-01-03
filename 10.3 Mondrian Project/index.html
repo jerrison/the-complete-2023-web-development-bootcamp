@@ -28,11 +28,13 @@
       .container {
         display: grid;
         grid-template-columns: 320px 198px 153px 50px;
-        grid-template-rows: 414px 130px 155px 20px;
+        grid-template-rows: 414px 130px 155px 22px;
+        /* the solution code uses a 22px row but the goal states that it 
+        should be 20px. Confused. */
         background-color: #000;
         gap: 9px;
-        max-width: 748px;
-        max-height: 748px;
+        width: 748px;
+        height: 748px;
         margin-top: 100px;
       }
 
@@ -43,7 +45,7 @@
 
       .item-2 {
         background-color: #f0f1ec;
-        grid-column-start: 2;
+        /* grid-column-start: 2; */
         /* grid-column-end: -1; */
         grid-column-end: span 3;
       }
@@ -63,6 +65,8 @@
         background-color: #004592;
         grid-row: span 1;
         grid-column: span 1;
+        border-bottom: 10px solid #000; 
+        /* From solution. It seems like border overrides gap. */
       }
 
       .item-6 {
